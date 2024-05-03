@@ -14,7 +14,7 @@ public class main {
        		Mejor película de época
        		""";
        double mediaNotaUsuario =0;
-       int i=1;
+       
        System.out.println("Nombre película: "+nombre);
        System.out.println("Año de lanzamiento: "+anioLanzamiento);
        System.out.println("Puntuación: "+evaluacion);
@@ -31,13 +31,11 @@ public class main {
        {
     	   System.out.println("Película retro que vale la pena ver");
        }
-      
-       while(i<4) {
+       for(int i=0;i<3;i++) {
+    	   Scanner teclado = new Scanner(System.in); 
     	   System.out.println("Ingresa tu evaluación para la película La lista de schindler: ");
-    	   Scanner teclado = new Scanner(System.in);
-           double notaUsuario = teclado.nextDouble();
+    	   double notaUsuario = teclado.nextDouble();
     	   mediaNotaUsuario= mediaNotaUsuario+ notaUsuario;
-    	   i++;
        }
        mediaNotaUsuario=mediaNotaUsuario/3;
        System.out.println("La nota media para la película es: "+mediaNotaUsuario);
